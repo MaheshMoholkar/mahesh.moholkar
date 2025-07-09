@@ -12,7 +12,7 @@ const navItems = [
   },
   {
     label: "About",
-    href: "/",
+    href: "/#about",
   },
   {
     label: "Projects",
@@ -107,6 +107,7 @@ function Navbar() {
                   <motion.a
                     key={item.label}
                     href={item.href}
+                    onClick={() => setIsOpen((prev) => !prev)}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}

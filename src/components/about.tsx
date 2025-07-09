@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { Globe } from "./ui/globe";
 import { OrbitingCircles } from "./ui/orbitting-circles";
 import { Logo, skills } from "@/lib/logo";
+import { certificates, getCertificateTheme } from "@/lib/cert";
 
 function About() {
   const [copied, setCopied] = useState<string | null>(null);
@@ -45,8 +46,17 @@ function About() {
           <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo"></div>
         </div>
         {/* Grid 2 */}
-        <div className="grid-default-color grid-2">
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+        <div className="grid-default-color grid-2 relative">
+          <div className="hidden md:block z-10 max-w-sm relative">
+            <h3 className="text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-3">
+              Tech Stack
+            </h3>
+            <p className="text-sm md:text-base lg:text-lg text-neutral-400 leading-relaxed">
+              I specialize in full-stack development with expertise in modern
+              web technologies.
+            </p>
+          </div>
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-0 md:start-[50%] md:scale-125">
             {/* Three concentric orbiting circles */}
             <div className="relative flex h-[15rem] w-full flex-col items-center justify-center overflow-hidden">
               {/* Inner circle - Core technologies (fewest logos) */}
@@ -122,12 +132,12 @@ function About() {
         </div>
         {/* Grid 4 */}
         <div className="grid-default-color grid-4">
-          <div className="flex flex-col items-center justify-center gap-4 md:gap-6 size-full">
+          <div className="flex flex-col items-center justify-center gap-1 size-full">
             <div className="text-center">
-              <h3 className="headtext hidden lg:flex justify-center items-center">
+              <h3 className="headtext flex justify-center items-center">
                 Connect
               </h3>
-              <p className="subtext md:headtext text-white">
+              <p className="hidden lg:block subtext md:headtext text-white">
                 Let&apos;s build something great together
               </p>
             </div>
@@ -146,7 +156,7 @@ function About() {
                     height={20}
                     className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform"
                   />
-                  <span className="text-neutral-300 group-hover:text-white transition-colors text-xs md:text-sm flex-1">
+                  <span className="text-neutral-300 group-hover:text-white transition-colors text-sm flex-1">
                     Gmail
                   </span>
                 </a>
@@ -184,7 +194,7 @@ function About() {
                     height={20}
                     className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform"
                   />
-                  <span className="text-neutral-300 group-hover:text-white transition-colors text-xs md:text-sm">
+                  <span className="text-neutral-300 group-hover:text-white transition-colors text-sm">
                     GitHub
                   </span>
                 </a>
@@ -225,7 +235,7 @@ function About() {
                     height={20}
                     className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform"
                   />
-                  <span className="text-neutral-300 group-hover:text-white transition-colors text-xs md:text-sm">
+                  <span className="text-neutral-300 group-hover:text-white transition-colors text-sm">
                     X
                   </span>
                 </a>
@@ -263,7 +273,7 @@ function About() {
                     height={20}
                     className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform"
                   />
-                  <span className="text-neutral-300 group-hover:text-white transition-colors text-xs md:text-sm">
+                  <span className="text-neutral-300 group-hover:text-white transition-colors text-sm">
                     LinkedIn
                   </span>
                 </a>
@@ -293,7 +303,49 @@ function About() {
           </div>
         </div>
         {/* Grid 5 */}
-        <div className="grid-default-color grid-5"></div>
+        <div className="grid-default-color grid-5">
+          <div className="flex flex-col items-center justify-center gap-2 md:gap-4 lg:gap-6 size-full p-2 md:p-4">
+            <div className="text-center">
+              <h3 className="text-md md:text-xl lg:text-2xl xl:text-3xl text-neutral-300 mb-1 md:mb-2">
+                Certifications
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2  justify-center gap-2 w-full max-w-4xl">
+              {certificates.map((cert, index) => {
+                const theme = getCertificateTheme(cert.from);
+                return (
+                  <div
+                    key={index}
+                    className={`flex items-center gap-1 md:gap-2 px-2 md:px-3 py-1 md:py-2 rounded-lg bg-white/5 border ${theme.borderColor} hover:bg-white/10 ${theme.hoverBorderColor} transition-all duration-200 group cursor-pointer`}
+                    onClick={() => window.open(cert.link, "_blank")}
+                    title={`View ${cert.title} certificate`}
+                  >
+                    <div
+                      className={`w-4 h-4 md:w-5 md:h-5 ${theme.bgColor} ${theme.hoverBgColor} rounded flex items-center justify-center transition-colors flex-shrink-0`}
+                    >
+                      <svg
+                        className="w-2 h-2 md:w-3 md:h-3 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                      </svg>
+                    </div>
+                    <div className="flex flex-col min-w-0">
+                      <span className="text-neutral-300 font-medium text-sm leading-tight truncate">
+                        {cert.title}
+                      </span>
+                      <span className="text-neutral-400 text-xs leading-tight">
+                        {cert.from}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
