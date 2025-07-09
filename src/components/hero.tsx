@@ -32,11 +32,11 @@ function Hero() {
   const y = useSpring(scrollY, { damping: 50 });
 
   // Parallax transforms using window scroll
-  const skyY = useTransform(y, [0, 1000], ["0%", "20%"]);
-  const mountain3Y = useTransform(y, [0, 1000], ["0%", "50%"]);
-  const planetsY = useTransform(y, [0, 1000], ["0%", "-30%"]);
-  const mountain2Y = useTransform(y, [0, 1000], ["0%", "30%"]);
-  const mountain1Y = useTransform(y, [0, 1000], ["0%", "10%"]);
+  const skyY = useTransform(y, [0, 1000], ["0%", "10%"]);
+  const mountain3Y = useTransform(y, [0, 1000], ["0%", "20%"]);
+  const planetsY = useTransform(y, [0, 1000], ["0%", "-10%"]);
+  const mountain2Y = useTransform(y, [0, 1000], ["0%", "10%"]);
+  const mountain1Y = useTransform(y, [0, 1000], ["0%", "5%"]);
 
   const isMobile = useMediaQuery({ maxWidth: 853 });
 

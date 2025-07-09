@@ -4,7 +4,7 @@ import experiences from "@/lib/experience";
 
 function Experiences() {
   return (
-    <section className="w-full">
+    <section className="container mx-auto max-w-4xl">
       <Timeline data={experiences} />
     </section>
   );
