@@ -21,12 +21,16 @@ export const skills: Logo[] = [
     image: "/assets/logos/TypeScript.svg",
   },
   {
+    text: "TailwindCSS",
+    image: "/assets/logos/tailwindcss.svg",
+  },
+  {
     text: "React",
     image: "/assets/logos/react.svg",
   },
   {
-    text: "TailwindCSS",
-    image: "/assets/logos/tailwindcss.svg",
+    text: "Next.js",
+    image: "/assets/logos/Next.js.svg",
   },
   {
     text: "Vitejs",
@@ -37,24 +41,8 @@ export const skills: Logo[] = [
     image: "/assets/logos/git.svg",
   },
   {
-    text: "Docker",
-    image: "/assets/logos/Docker.svg",
-  },
-  {
-    text: "Go",
-    image: "/assets/logos/Go.svg",
-  },
-  {
     text: "Node.js",
     image: "/assets/logos/Node.js.svg",
-  },
-  {
-    text: "Next.js",
-    image: "/assets/logos/Next.js.svg",
-  },
-  {
-    text: "Python",
-    image: "/assets/logos/Python.svg",
   },
   {
     text: "Java",
@@ -63,6 +51,10 @@ export const skills: Logo[] = [
   {
     text: "Spring",
     image: "/assets/logos/Spring.svg",
+  },
+  {
+    text: "Python",
+    image: "/assets/logos/Python.svg",
   },
   {
     text: "FastAPI",
@@ -77,16 +69,24 @@ export const skills: Logo[] = [
     image: "/assets/logos/PostgresSQL.svg",
   },
   {
+    text: "Go",
+    image: "/assets/logos/Go.svg",
+  },
+  {
     text: "Redis",
     image: "/assets/logos/Redis.svg",
   },
   {
-    text: "Apache Kafka",
-    image: "/assets/logos/Apache Kafka.svg",
+    text: "Docker",
+    image: "/assets/logos/Docker.svg",
   },
   {
     text: "Kubernetes",
     image: "/assets/logos/Kubernetes.svg",
+  },
+  {
+    text: "Apache Kafka",
+    image: "/assets/logos/Apache Kafka.svg",
   },
   {
     text: "NGINX",
@@ -112,10 +112,10 @@ export const skills: Logo[] = [
     text: "Astro",
     image: "/assets/logos/Astro.svg",
   },
-  {
-    text: "WebAssembly",
-    image: "/assets/logos/WebAssembly.svg",
-  },
+  // {
+  //   text: "WebAssembly",
+  //   image: "/assets/logos/WebAssembly.svg",
+  // },
   {
     text: ".NET",
     image: "/assets/logos/dotnet.svg",

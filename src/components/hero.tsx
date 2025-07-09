@@ -57,7 +57,7 @@ function Hero() {
             transition={{ delay: 1 }}
             className="text-4xl font-medium"
           >
-            Hi I&apos;m Mahesh
+            Hi, I&apos;m Mahesh
           </motion.h1>
           <div className="flex flex-col items-start">
             <motion.p

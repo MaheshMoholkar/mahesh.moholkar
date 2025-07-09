@@ -21,7 +21,7 @@ function About() {
   };
 
   return (
-    <section className="c-space section">
+    <section id="about" className="c-space section">
       <h2 className="text-heading mt-12">About Me</h2>
       <div className="grid grid-cols-1 gap-3 md:gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
