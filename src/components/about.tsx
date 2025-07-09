@@ -31,6 +31,7 @@ function About() {
             className="absolute inset-0 scale-[5]"
             width={400}
             height={400}
+            priority
             alt="Coding POV"
           />
           <div className="z-5">
