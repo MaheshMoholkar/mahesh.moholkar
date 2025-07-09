@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mahesh Mohoklar",
+  title: "Mahesh Moholkar",
   description: "Portfolio",
 };
 
