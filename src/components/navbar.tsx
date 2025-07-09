@@ -12,15 +12,15 @@ const navItems = [
   },
   {
     label: "About",
-    href: "/about",
+    href: "/",
   },
   {
     label: "Projects",
-    href: "/projects",
+    href: "/",
   },
   {
     label: "Contact",
-    href: "/contact",
+    href: "/",
   },
 ];
 
@@ -36,7 +36,7 @@ function Navbar() {
   }, [isOpen]);
   return (
     <>
-      <header className="sticky top-0 bg-neutral-900/50 backdrop-blur-lg z-40">
+      <header className="sticky top-0 bg-neutral-900/50 backdrop-blur-lg z-20">
         <div className="container px-4 md:px-8 lg:px-16">
           <div className="flex items-center justify-between h-12 md:h-16">
             <Link
@@ -99,7 +99,7 @@ function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="fixed top-0 left-0 size-full z-10 bg-neutral-900"
+            className="fixed top-0 left-0 size-full z-15 bg-neutral-900"
           >
             <div className="h-full flex justify-center items-center">
               <nav className="flex flex-col items-center gap-12 md:gap-16">
