@@ -48,7 +48,7 @@ function About() {
         </div>
         {/* Grid 2 */}
         <div className="grid-default-color grid-2 relative">
-          <div className="hidden md:block z-10 max-w-sm relative">
+          <div className="hidden lg:block z-10 max-w-sm relative">
             <h3 className="text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-3">
               Tech Stack
             </h3>
@@ -57,9 +57,9 @@ function About() {
               web technologies.
             </p>
           </div>
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-0 md:start-[50%] md:scale-125">
+          <div className="absolute inset-y-0 w-full h-full start-0 lg:start-[50%] lg:scale-125">
             {/* Three concentric orbiting circles */}
-            <div className="relative flex h-[15rem] w-full flex-col items-center justify-center overflow-hidden">
+            <div className="relative flex h-[20rem] w-full flex-col items-center justify-center overflow-hidden">
               {/* Inner circle - Core technologies (fewest logos) */}
               <OrbitingCircles iconSize={35} radius={60} reverse speed={1.5}>
                 {skills.slice(0, 6).map((skill: Logo, index: number) => (
@@ -135,7 +135,7 @@ function About() {
         <div className="grid-default-color grid-4">
           <div className="flex flex-col items-center justify-center gap-1 size-full">
             <div className="text-center">
-              <h3 className="headtext flex justify-center items-center">
+              <h3 className="text-md md:text-xl lg:text-2xl xl:text-3xl flex justify-center items-center">
                 Connect
               </h3>
               <p className="hidden lg:block subtext md:headtext text-white">
