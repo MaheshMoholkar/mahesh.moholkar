@@ -22,7 +22,7 @@ function About() {
 
   return (
     <section id="about" className="c-space section">
-      <h2 className="text-heading mt-12">About Me</h2>
+      <h2 className="text-heading mt-12 text-center">About Me</h2>
       <div className="grid grid-cols-1 gap-3 md:gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
         <div className="flex items-end grid-default-color grid-1">
@@ -39,8 +39,8 @@ function About() {
             </p>
             <p className="text-lg md:text-xl lg:text-2 xl text-neutral-300">
               Over the last {new Date().getFullYear() - 2023} years, I have
-              developed my frontend and backend development skills to deliver
-              dynamic and scalable web applications.
+              developed my development skills to deliver dynamic and scalable
+              web applications.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo"></div>

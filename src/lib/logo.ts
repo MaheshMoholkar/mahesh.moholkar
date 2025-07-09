@@ -25,6 +25,10 @@ export const skills: Logo[] = [
     image: "/assets/logos/tailwindcss.svg",
   },
   {
+    text: "Git",
+    image: "/assets/logos/git.svg",
+  },
+  {
     text: "React",
     image: "/assets/logos/react.svg",
   },
@@ -36,10 +40,7 @@ export const skills: Logo[] = [
     text: "Vitejs",
     image: "/assets/logos/vitejs.svg",
   },
-  {
-    text: "Git",
-    image: "/assets/logos/git.svg",
-  },
+
   {
     text: "Node.js",
     image: "/assets/logos/Node.js.svg",
@@ -51,6 +52,10 @@ export const skills: Logo[] = [
   {
     text: "Spring",
     image: "/assets/logos/Spring.svg",
+  },
+  {
+    text: ".NET",
+    image: "/assets/logos/dotnet.svg",
   },
   {
     text: "Python",
@@ -116,8 +121,4 @@ export const skills: Logo[] = [
   //   text: "WebAssembly",
   //   image: "/assets/logos/WebAssembly.svg",
   // },
-  {
-    text: ".NET",
-    image: "/assets/logos/dotnet.svg",
-  },
 ];
