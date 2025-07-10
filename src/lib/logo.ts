@@ -5,14 +5,6 @@ export interface Logo {
 
 export const skills: Logo[] = [
   {
-    text: "HTML",
-    image: "/assets/logos/html5.svg",
-  },
-  {
-    text: "CSS",
-    image: "/assets/logos/css3.svg",
-  },
-  {
     text: "JavaScript",
     image: "/assets/logos/javascript.svg",
   },
@@ -23,10 +15,6 @@ export const skills: Logo[] = [
   {
     text: "TailwindCSS",
     image: "/assets/logos/tailwindcss.svg",
-  },
-  {
-    text: "Git",
-    image: "/assets/logos/git.svg",
   },
   {
     text: "React",
@@ -40,7 +28,6 @@ export const skills: Logo[] = [
     text: "Vitejs",
     image: "/assets/logos/vitejs.svg",
   },
-
   {
     text: "Node.js",
     image: "/assets/logos/Node.js.svg",
@@ -52,18 +39,6 @@ export const skills: Logo[] = [
   {
     text: "Spring",
     image: "/assets/logos/Spring.svg",
-  },
-  {
-    text: ".NET",
-    image: "/assets/logos/dotnet.svg",
-  },
-  {
-    text: "Python",
-    image: "/assets/logos/Python.svg",
-  },
-  {
-    text: "FastAPI",
-    image: "/assets/logos/FastAPI.svg",
   },
   {
     text: "MongoDB",
@@ -85,40 +60,4 @@ export const skills: Logo[] = [
     text: "Docker",
     image: "/assets/logos/Docker.svg",
   },
-  {
-    text: "Kubernetes",
-    image: "/assets/logos/Kubernetes.svg",
-  },
-  {
-    text: "Apache Kafka",
-    image: "/assets/logos/Apache Kafka.svg",
-  },
-  {
-    text: "NGINX",
-    image: "/assets/logos/NGINX.svg",
-  },
-  {
-    text: "Rust",
-    image: "/assets/logos/Rust.svg",
-  },
-  {
-    text: "Elixir",
-    image: "/assets/logos/Elixir.svg",
-  },
-  {
-    text: "Phoenix",
-    image: "/assets/logos/Phoenix Framework.svg",
-  },
-  {
-    text: "Flutter",
-    image: "/assets/logos/Flutter.svg",
-  },
-  {
-    text: "Astro",
-    image: "/assets/logos/Astro.svg",
-  },
-  // {
-  //   text: "WebAssembly",
-  //   image: "/assets/logos/WebAssembly.svg",
-  // },
 ];

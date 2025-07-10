@@ -3,8 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Globe } from "./ui/globe";
-import { OrbitingCircles } from "./ui/orbitting-circles";
-import { Logo, skills } from "@/lib/logo";
+import { skills } from "@/lib/logo";
 import { certificates, getCertificateTheme } from "@/lib/cert";
 
 function About() {
@@ -48,74 +47,35 @@ function About() {
         </div>
         {/* Grid 2 */}
         <div className="grid-default-color grid-2 relative">
-          <div className="hidden lg:block z-10 max-w-sm relative">
-            <h3 className="text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-3">
-              Tech Stack
-            </h3>
-            <p className="text-sm md:text-base lg:text-lg text-neutral-400 leading-relaxed">
-              I specialize in full-stack development with expertise in modern
-              web technologies.
-            </p>
-          </div>
-          <div className="absolute inset-y-0 w-full h-full start-0 lg:start-[50%] lg:scale-125">
-            {/* Three concentric orbiting circles */}
-            <div className="relative flex h-[20rem] w-full flex-col items-center justify-center overflow-hidden">
-              {/* Inner circle - Core technologies (fewest logos) */}
-              <OrbitingCircles iconSize={35} radius={60} reverse speed={1.5}>
-                {skills.slice(0, 6).map((skill: Logo, index: number) => (
-                  <div
-                    key={`inner-${index}`}
-                    className="flex items-center justify-center w-full h-full bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-200 group"
-                    title={skill.text}
-                  >
-                    <Image
-                      src={skill.image}
-                      alt={skill.text}
-                      width={24}
-                      height={24}
-                      className="w-5 h-5 group-hover:scale-110 transition-transform"
-                    />
-                  </div>
-                ))}
-              </OrbitingCircles>
-
-              {/* Middle circle - Framework technologies (medium logos) */}
-              <OrbitingCircles iconSize={40} radius={120} speed={1}>
-                {skills.slice(6, 14).map((skill: Logo, index: number) => (
-                  <div
-                    key={`middle-${index}`}
-                    className="flex items-center justify-center w-full h-full bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-200 group"
-                    title={skill.text}
-                  >
-                    <Image
-                      src={skill.image}
-                      alt={skill.text}
-                      width={28}
-                      height={28}
-                      className="w-6 h-6 group-hover:scale-110 transition-transform"
-                    />
-                  </div>
-                ))}
-              </OrbitingCircles>
-
-              {/* Outer circle - Additional technologies (most logos) */}
-              <OrbitingCircles iconSize={45} radius={180} reverse speed={0.8}>
-                {skills.slice(14).map((skill: Logo, index: number) => (
-                  <div
-                    key={`outer-${index}`}
-                    className="flex items-center justify-center w-full h-full bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-200 group"
-                    title={skill.text}
-                  >
-                    <Image
-                      src={skill.image}
-                      alt={skill.text}
-                      width={32}
-                      height={32}
-                      className="w-7 h-7 group-hover:scale-110 transition-transform"
-                    />
-                  </div>
-                ))}
-              </OrbitingCircles>
+          <div className="flex flex-col items-center justify-center h-full p-4">
+            <div className="text-center mb-4">
+              <h3 className="text-xl md:text-2xl lg:text-3xl text-neutral-300 mb-3">
+                Tech Stack
+              </h3>
+              <p className="text-sm md:text-base lg:text-lg text-neutral-400 leading-relaxed">
+                I specialize in full-stack development with expertise in modern
+                web technologies.
+              </p>
+            </div>
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2 md:gap-3 w-full max-w-2xl">
+              {skills.map((skill, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center gap-1 p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-200 group"
+                  title={skill.text}
+                >
+                  <Image
+                    src={skill.image}
+                    alt={skill.text}
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 md:w-8 md:h-8 group-hover:scale-110 transition-transform"
+                  />
+                  <span className="text-neutral-400 text-xs text-center leading-tight group-hover:text-white transition-colors">
+                    {skill.text}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -313,7 +273,7 @@ function About() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2  justify-center gap-2 w-full max-w-4xl">
-              {certificates.map((cert, index) => {
+              {certificates.slice(0, 4).map((cert, index) => {
                 const theme = getCertificateTheme(cert.from);
                 return (
                   <div
