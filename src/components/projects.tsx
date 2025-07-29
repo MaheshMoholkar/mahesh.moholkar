@@ -18,13 +18,20 @@ const tagIconMap: Record<string, string> = {
   "Next.js": "/assets/logos/Next.js.svg",
   TailwindCSS: "/assets/logos/tailwindcss.svg",
   TypeScript: "/assets/logos/TypeScript.svg",
-  // Add more mappings as needed
+  React: "/assets/logos/react.svg",
+  Vite: "/assets/logos/vitejs.svg",
+  "Astro.js": "/assets/logos/Astro.svg",
+  PostgreSQL: "/assets/logos/PostgresSQL.svg",
+  Redis: "/assets/logos/Redis.svg",
+  ".NET": "/assets/logos/dotnet.svg",
+  Golang: "/assets/logos/Go.svg",
+  GitHub: "/assets/logos/git.svg",
 };
 const fallbackIcon = "/assets/logos/react.svg";
 
 function Projects() {
   return (
-    <section className="relative c-space section-spacing">
+    <section id="projects" className="relative c-space section-spacing">
       <h2 className="text-heading text-center">Projects</h2>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full"></div>
       <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -37,22 +44,32 @@ function Projects() {
             viewport={{ once: true, amount: 0.3 }}
             variants={cardVariants}
           >
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
               <Image
                 src={project.image}
                 alt={project.title}
                 width={600}
                 height={340}
-                className="w-full h-48 object-cover"
+                className="w-full h-56 object-cover"
               />
             </a>
             <div className="flex-1 flex flex-col p-6 gap-4">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <h3 className="text-xl font-bold text-white transition-colors">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <h3 className="text-xl font-bold text-white transition-colors hover:text-neutral-300">
                   {project.title}
                 </h3>
               </a>
-              <p className="text-neutral-300 text-base mb-2">
+              <p className="text-neutral-300 text-sm leading-relaxed mb-2">
                 {project.description}
               </p>
               <div className="flex justify-between">
@@ -73,10 +90,11 @@ function Projects() {
                   ))}
                 </div>
                 <a
-                  href={project.link}
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 hover:text-white px-4 py-2 rounded-lg border border-neutral-700 transition-colors mt-4 w-fit"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <svg
                     className="w-4 h-4"

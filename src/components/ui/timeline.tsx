@@ -7,6 +7,8 @@ interface TimelineEntry {
   contents: string[];
   date: string;
   job: string;
+  company?: string;
+  location?: string;
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -41,7 +43,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const heightTransform = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, height + 30]
+    [0, height - 45] // Reduced by 20px to stop at the last dot
   );
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
@@ -53,7 +55,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         {/* Vertical Timeline Line */}
         <div
           style={{
-            height: height + 30 + "px",
+            height: height + "px",
           }}
           className="absolute left-6 top-10 md:top-40 w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] z-0"
         >
@@ -81,8 +83,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             {/* Desktop: Sticky left content */}
             <div className="hidden md:flex top-40 self-start max-w-xs lg:max-w-sm w-full pl-16">
               <div className="flex flex-col gap-2 text-xl font-bold md:text-4xl text-neutral-300">
-                <h3>{item.date}</h3>
+                <h3 className="text-lg font-semibold">{item.date}</h3>
                 <h3 className="text-3xl text-neutral-400">{item.title}</h3>
+                {item.company && (
+                  <h4 className="text-lg text-neutral-500">{item.company}</h4>
+                )}
+                {item.location && (
+                  <h5 className="text-sm text-neutral-600">{item.location}</h5>
+                )}
               </div>
             </div>
 
@@ -92,6 +100,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="block mb-4 text-2xl font-bold text-neutral-300 md:hidden">
                 <h3>{item.job}</h3>
                 <h3>{item.date}</h3>
+                {item.company && (
+                  <h4 className="text-lg text-neutral-500">{item.company}</h4>
+                )}
+                {item.location && (
+                  <h5 className="text-sm text-neutral-600">{item.location}</h5>
+                )}
               </div>
               {item.contents.map((content, contentIndex) => (
                 <p
