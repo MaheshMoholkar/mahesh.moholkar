@@ -184,7 +184,7 @@ function About() {
 
               <div className="flex items-center gap-2 md:gap-3 w-full p-2 md:p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-200 group">
                 <a
-                  href="https://x.com/MaheshMoholkar_"
+                  href="https://x.com/maheshstwt"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 md:gap-3 flex-1"
@@ -202,7 +202,7 @@ function About() {
                 </a>
                 <button
                   onClick={() =>
-                    copyToClipboard("https://x.com/MaheshMoholkar_", "twitter")
+                    copyToClipboard("https://x.com/maheshstwt", "twitter")
                   }
                   className="hover:text-white transition-colors"
                 >
