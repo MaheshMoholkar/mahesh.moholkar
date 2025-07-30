@@ -37,7 +37,7 @@ export const projects: Project[] = [
     link: "https://blockforge-one.vercel.app/",
     github: "https://github.com/MaheshMoholkar/blockforge",
     description:
-      "A sophisticated blockchain SaaS platform built with Astro.js and modern web technologies. Features revolutionary blockchain API, decentralized data solutions, next-gen smart contracts, and seamless blockchain integration for Web3 applications.",
+      "A blockchain SaaS landing page built with Astro.js and modern web technologies. Also includes blogs section.",
     image: "/assets/projects/blockforge.png",
     tags: ["React", "Astro.js", "TypeScript", "TailwindCSS"],
   },

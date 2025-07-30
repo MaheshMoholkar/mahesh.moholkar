@@ -3,7 +3,7 @@ const experiences = [
     title: "Full Stack Developer",
     job: "Full Stack Developer",
     company: "Vision",
-    date: "Jan 2025 - Present",
+    date: "Jan 2025 - Aug 2025",
     location: "Kuwait (Remote)",
     contents: [
       "Building a comprehensive inventory management system for a Kuwait-based startup.",
@@ -15,7 +15,7 @@ const experiences = [
     title: "Junior Software Engineer",
     job: "Junior Software Engineer",
     company: "DPU Unitech Foundation",
-    date: "Aug 2024 - Present",
+    date: "Aug 2024 - Aug 2025",
     location: "Pune, India",
     contents: [
       "Promoted to Junior Software Engineer. Continuing development of Campus ERP Web App and other internal tools.",
